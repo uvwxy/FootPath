@@ -25,5 +25,5 @@ android {
 }
 
 dependencies {
-    compile project(':android_ComSys_FootPathMaster')
+    compile project(':footpathLib')
 }
