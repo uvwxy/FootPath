@@ -1,0 +1,2 @@
+include ':android_ComSys_FootPathMaster'
+include ':android_ComSys_FootPathTestGui'

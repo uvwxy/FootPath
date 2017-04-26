@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true" >
+
+    <TextView
+        android:id="@+id/lbl01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter id"
+        android:textSize="24px" >
+    </TextView>
+    
+    <EditText
+        android:id="@+id/txt01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl01"
+        android:text="h263"
+        android:width="96dp" >
+    </EditText>
+
+    <Button
+        android:id="@+id/btn01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl01"
+        android:layout_toRightOf="@+id/txt01"
+        android:text="Start"
+        android:textSize="24px" >
+    </Button>
+
+    
+
+    <TextView
+        android:id="@+id/lblParserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn01"
+        android:layout_alignParentRight="true"
+        android:text="N/A" />
+
+    <SurfaceView
+        android:id="@+id/sv01"
+        android:layout_width="320px"
+        android:layout_height="240px"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txt01" />
+
+    <SurfaceView
+        android:id="@+id/svMVPaint"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/sv01" />
+
+</RelativeLayout>
