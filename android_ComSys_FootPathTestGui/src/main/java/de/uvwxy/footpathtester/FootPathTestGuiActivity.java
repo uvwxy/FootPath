@@ -167,7 +167,7 @@ public class FootPathTestGuiActivity extends Activity implements OnTouchListener
 		// return;
 		Intent my_intent = new Intent(FootPathTestGuiActivity.this, MapFileSelector.class);
 		// Below is read from the Activity
-		my_intent.putExtra("INIT_PATH", "/mnt/sdcard/footpath/");
+		my_intent.putExtra("INIT_PATH", "/mnt/sdcard/");
 		my_intent.putExtra("FILTER", "osm,xml");
 		startActivityForResult(my_intent, CALLED_FOR_FILE_PATH);
 	}
@@ -191,17 +191,17 @@ public class FootPathTestGuiActivity extends Activity implements OnTouchListener
 
 		dialog.dismiss();
 
-		if (loadedRooms != null) {
+		if (loadedRooms != null && loadedRooms.length >= 2) {
 			Toast.makeText(this, "Loaded map data now contains " + loadedRooms.length + " locations with names",
 					Toast.LENGTH_LONG).show();
-			roomLocation = loadedRooms[(int) (Math.random() * (loadedRooms.length - 1))];
-			roomDestination = loadedRooms[(int) (Math.random() * (loadedRooms.length - 1))];
-			roomLocation = "D3";
-			roomDestination = "D9";
+			roomLocation = loadedRooms[0];
+			roomDestination = loadedRooms[loadedRooms.length-1];
+			//roomLocation = "D3";
+			//roomDestination = "D9";
 			tvInfo.setText("Random location: " + roomLocation + "\nRandom destination: " + roomDestination);
 			button4.setEnabled(true);
 		} else {
-			tvInfo.setText("Map data contained no rooms!)");
+			tvInfo.setText("Map data contained no or not enough rooms!)");
 		}
 	}
 
