@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "de.uvwxy.footpathtester"
-        minSdkVersion 25
+        minSdkVersion 10
         targetSdkVersion 10
     }
 
